@@ -50,8 +50,8 @@ public class Shortest_Common_Supersequence {
 			lcs = s2.charAt(j - 1) + lcs;
 			j--;
 		}
-		System.out.println("Length of longest common subsequence = " + dp[n][m]);
-		System.out.println("LCS = " + lcs);
+		System.out.println("Length of Shortest_Common_Supersequence = " + (n + m - dp[n][m]));
+		System.out.println("Shortest_Common_Supersequence = " + lcs);
 	}
 
 }
