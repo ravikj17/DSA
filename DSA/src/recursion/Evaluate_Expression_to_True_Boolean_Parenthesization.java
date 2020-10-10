@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Evaluate_Expression_to_True_Boolean_Parenthesization_Recursive {
+public class Evaluate_Expression_to_True_Boolean_Parenthesization {
 
 	public static void main(String[] args) throws IOException {
 
