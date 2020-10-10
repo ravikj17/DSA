@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 
-public class Evaluate_Expression_to_True_Boolean_Parenthesization_DP {
+public class Evaluate_Expression_to_True_Boolean_ParenthesizationDP {
 	static HashMap<String, Integer> map = new HashMap<>();
 
 	public static void main(String[] args) throws IOException {
