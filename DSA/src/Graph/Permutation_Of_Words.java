@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Permutaion_Of_Words {
+public class Permutation_Of_Words {
 
 	public static void main(String[] args) throws IOException {
 
