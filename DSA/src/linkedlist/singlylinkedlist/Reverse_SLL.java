@@ -36,15 +36,12 @@ public class Reverse_SLL {
 		if (head == null || head.next == null) {
 			return head;
 		}
-		Node prev = null, curr = head, temp = head.next;
-		while (true) {
+		Node prev = null, curr = head, temp = null;
+		while (curr != null) {
+			temp = curr.next;
 			curr.next = prev;
 			prev = curr;
 			curr = temp;
-			if (curr == null) {
-				break;
-			}
-			temp = curr.next;
 		}
 		return prev;
 	}
