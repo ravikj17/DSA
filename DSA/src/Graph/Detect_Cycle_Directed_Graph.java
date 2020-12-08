@@ -33,34 +33,29 @@ public class Detect_Cycle_Directed_Graph {
 	static boolean[] bSet;
 
 	static boolean isCyclic(ArrayList<ArrayList<Integer>> adj, int V) {
-		wSet = new boolean[V];
-		bSet = new boolean[V];
 		for (int i = 0; i < V; i++) {
-			if (!wSet[i]) {
-				boolean[] visited = new boolean[V];
-				if (DFS(adj, i, visited))
-					return true;
+			boolean[] visited = new boolean[V];
+			if (DFS(adj, i, visited)) {
+				return true;
 			}
 		}
 		return false;
 	}
 
-	static boolean DFS(ArrayList<ArrayList<Integer>> adj, int s, boolean[] visited) {
+	static boolean DFS(ArrayList<ArrayList<Integer>> adj, int v, boolean[] visited) {
 
-		if (visited[s])
-			return true;
-		wSet[s] = true;
-		visited[s] = true;
-		boolean flag = false;
-		Iterator<Integer> itr = adj.get(s).listIterator();
+		visited[v] = true;
+		Iterator<Integer> itr = adj.get(v).listIterator();
 		while (itr.hasNext()) {
-			int n = (int) itr.next();
-			if (!bSet[n]) {
-				flag = flag || DFS(adj, n, visited);
-			}
+			int n = itr.next();
+			if (visited[n])
+				return true;
+			visited[n] = true;
+			if (DFS(adj, n, visited))
+				return true;
+			visited[n] = false;
 		}
-		bSet[s] = true;
-		return flag;
+		return false;
 
 	}
 
